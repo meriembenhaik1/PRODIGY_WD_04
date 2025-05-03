@@ -322,42 +322,49 @@ profile-photo .img{
 
 
 /*---------------------------Projects---------------------------*/
-.project-content{
+.project-content {
   padding: 90px 0;
-  /* color:#fff;  */
+  background-color: #222; /* Added background color for better visibility */
 }
-.project-title{
+
+.project-title {
   margin-bottom: 60px;
   text-align: center;
 }
-.project-title h4{
+
+.project-title h4 {
   text-transform: uppercase;
   font-size: 40px;
   line-height: 40px;
   color: #ebdbce;
   margin-bottom: 20px;
 }
-.project-title p{
+
+.project-title p {
   color: #e5e5e5;
 }
-.projects{
+
+/* Fix: Added proper container for projects */
+.container > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project {
+  color: #e5e5e5;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  position: relative;
+  padding: 25px;
+  text-align: center;
+  transition: .3s;
+  height: 100%;
   display: flex;
-  justify-content:space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
-.project{
-    /* padding: 30px 15px; */
-    color: #e5e5e5;
-    border: 2px solid #e5e5e5;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    padding: 25px;
-    text-align: center;
-    flex-basis: 32%;
-    transition: .3s;
-}
-.project i{
+
+.project i {
   background-color: #ebdbce;
   width: 60px;
   height: 60px;
@@ -365,19 +372,62 @@ profile-photo .img{
   font-size: 26px;
   line-height: 60px;
   border-radius: 50%;
+  margin: 0 auto;
 }
-.project h4{
-  font-size: 26px;
+
+.project h4 {
+  font-size: 22px;
   text-transform: capitalize;
   margin: 20px 0;
 }
-.project p{
+
+.project p {
   text-align: justify;
-}
-.project:hover{
-  border-color: #ebdbce;
+  flex-grow: 1; /* Makes all project boxes the same height */
 }
 
+.project:hover {
+  border-color: #ebdbce;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #ebdbce;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #ebdbce;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .container > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container > div {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-title h4 {
+    font-size: 32px;
+  }
+}
 
 
 /*---------------------------Contact Me---------------------------*/
