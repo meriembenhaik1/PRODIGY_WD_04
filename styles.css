@@ -432,7 +432,7 @@ profile-photo .img{
 
 /* Contact Form Styling */
 .contact-content {
-  background-color: #f9f9f9;
+  background-color: #1a1a1a; /* Couleur sombre comme dans l'image */
   padding: 80px 0;
 }
 
@@ -445,12 +445,12 @@ profile-photo .img{
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #2d2e32;
+  color: #ffffff; /* Texte blanc pour contraste sur fond sombre */
 }
 
 .contact-title p {
   font-size: 18px;
-  color: #647589;
+  color: #b3b3b3; /* Gris clair pour sous-titre */
 }
 
 .contact form {
@@ -465,16 +465,24 @@ profile-photo .img{
   margin-bottom: 20px;
   padding: 15px;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
   transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1); /* Champs semi-transparents */
+  color: #ffffff;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Placeholder plus clair mais visible */
 }
 
 .contact input:focus,
 .contact textarea:focus {
   outline: none;
-  border-color: #4d61fc;
-  box-shadow: 0 0 8px rgba(77, 97, 252, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15); /* Légèrement plus opaque en focus */
 }
 
 .contact textarea {
@@ -483,8 +491,8 @@ profile-photo .img{
 }
 
 .contact .submit {
-  background-color: #4d61fc;
-  color: white;
+  background-color: #ffffff; /* Bouton blanc pour contraste */
+  color: #1a1a1a; /* Texte noir */
   cursor: pointer;
   border: none;
   padding: 15px 30px;
@@ -495,14 +503,14 @@ profile-photo .img{
 }
 
 .contact .submit:hover {
-  background-color: #3a4cd1;
+  background-color: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
 }
 
 #msg {
   text-align: center;
   margin-top: 20px;
-  color: #4d61fc;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 500;
 }
@@ -513,7 +521,6 @@ profile-photo .img{
     padding: 0 20px;
   }
 }
-
 
 
 
