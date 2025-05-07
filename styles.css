@@ -434,11 +434,24 @@ profile-photo .img{
 .contact-content {
   background-color: #1a1a1a; /* Couleur sombre comme dans l'image */
   padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Pour que la section prenne plus de hauteur */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact-title {
   text-align: center;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-title h4 {
@@ -453,8 +466,15 @@ profile-photo .img{
   color: #b3b3b3; /* Gris clair pour sous-titre */
 }
 
+.contact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .contact form {
-  max-width: 600px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -492,7 +512,7 @@ profile-photo .img{
 
 .contact .submit {
   background-color: #ffffff; /* Bouton blanc pour contraste */
-  color: #1a1a1a; /* Texte noir */
+  color: #000000; /* Texte noir */
   cursor: pointer;
   border: none;
   padding: 15px 30px;
@@ -500,6 +520,7 @@ profile-photo .img{
   font-weight: 600;
   border-radius: 5px;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .contact .submit:hover {
@@ -519,10 +540,9 @@ profile-photo .img{
 @media (max-width: 768px) {
   .contact form {
     padding: 0 20px;
+    width: 90%;
   }
 }
-
-
 
 
 /*---------------------------Footer---------------------------*/
